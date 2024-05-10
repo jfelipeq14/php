@@ -39,10 +39,12 @@
     </form>
     <script>
         const form = document.getElementById('form');
-        const datos = new FormData(form);
+
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
+
+            const datos = new FormData(form);
 
             fetch('./main.php', {
                     method: 'POST',
